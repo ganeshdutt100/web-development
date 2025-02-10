@@ -67,6 +67,7 @@ const server = http.createServer((req, res) => {
 </html>
 
         `);
+    return res.end();
   } else {
     res.setHeader("Content-Type", "text/html");
     res.write(`<!DOCTYPE html>
