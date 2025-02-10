@@ -17,14 +17,14 @@
 
 <body>
     <!-- navbar -->
-    <header class="text-gray-600 body-font bg-blue-100 rounded-b-full">
+    <header class="text-gray-600 body-font bg-blue-100 md:rounded-b-full transitionNav">
         <div class="container mx-auto flex flex-wrap justify-around items-center px-5 py-2">
 
             <div class="logoButton">
                 <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 ">
                     <img src="https://cdn.pixabay.com/photo/2017/06/08/17/43/blue-2384333_1280.png" alt=""
                         class="w-[123px] h-[94px]">
-                    <span class="ml-3 text-2xl font-medium">Portfolio </span>
+                    <span class="ml-3 text-2xl font-medium ">Portfolio </span>
 
                 </a>
             </div>
@@ -58,9 +58,18 @@
                 </button>
             </div>
             <div class="md:hidden text-2xl mt-[-15px]  hover:text-indigo-500">
-                <i class="fa-solid fa-bars "></i>
+
+                <i id="mobileMenuIcon" class="fa-solid fa-bars openMenu"></i>
 
             </div>
+            <!-- Mobile Navigation Menu -->
+            <nav id="mobileNav"
+                class="hidden transitionNav w-full flex flex-col items-center text-base gap-4 menu menu-1 mt-4">
+                <a class="hover:text-indigo-500 text-lg font-medium">Home</a>
+                <a class="hover:text-indigo-500 text-lg font-medium">About</a>
+                <a class="hover:text-indigo-500 text-lg font-medium">Contact</a>
+                <a class="hover:text-indigo-500 text-lg font-medium">Projects</a>
+            </nav>
         </div>
     </header>
 
@@ -68,9 +77,9 @@
 
     <!-- section-1 -->
     <section class="text-gray-600 body-font">
-        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div class="container mx-auto flex px-5 py-20 md:flex-row flex-col items-center">
             <div
-                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center order-1 md:order-0">
                 <h1 class=" textImage sm:text-4xl text-3xl mb-4 font-medium text-gray-900 "> I Am <span
                         id="element"></span>
                 </h1>
@@ -84,7 +93,7 @@
                         class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
                 </div>
             </div>
-            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 order-0 md:order-1 mb-10 md:mb-0">
                 <img class="object-cover object-center rounded" alt="hero"
                     src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_640.png">
             </div>

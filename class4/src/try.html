@@ -5,76 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .logoButton {
-            border: none;
-            position: relative;
-            width: 200px;
-            height: 73px;
-            padding: 0;
-            z-index: 2;
-            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='868' width='2500' viewBox='0 0 726 252.17'%3E%3Cpath d='M483.92 0S481.38 24.71 466 40.11c-11.74 11.74-24.09 12.66-40.26 15.07-9.42 1.41-29.7 3.77-34.81-.79-2.37-2.11-3-21-3.22-27.62-.21-6.92-1.36-16.52-2.82-18-.75 3.06-2.49 11.53-3.09 13.61S378.49 34.3 378 36a85.13 85.13 0 0 0-30.09 0c-.46-1.67-3.17-11.48-3.77-13.56s-2.34-10.55-3.09-13.61c-1.45 1.45-2.61 11.05-2.82 18-.21 6.67-.84 25.51-3.22 27.62-5.11 4.56-25.38 2.2-34.8.79-16.16-2.47-28.51-3.39-40.21-15.13C244.57 24.71 242 0 242 0H0s69.52 22.74 97.52 68.59c16.56 27.11 14.14 58.49 9.92 74.73C170 140 221.46 140 273 158.57c69.23 24.93 83.2 76.19 90 93.6 6.77-17.41 20.75-68.67 90-93.6 51.54-18.56 103-18.59 165.56-15.25-4.21-16.24-6.63-47.62 9.93-74.73C656.43 22.74 726 0 726 0z'/%3E%3C/svg%3E") no-repeat 50% 50%;
-            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='868' width='2500' viewBox='0 0 726 252.17'%3E%3Cpath d='M483.92 0S481.38 24.71 466 40.11c-11.74 11.74-24.09 12.66-40.26 15.07-9.42 1.41-29.7 3.77-34.81-.79-2.37-2.11-3-21-3.22-27.62-.21-6.92-1.36-16.52-2.82-18-.75 3.06-2.49 11.53-3.09 13.61S378.49 34.3 378 36a85.13 85.13 0 0 0-30.09 0c-.46-1.67-3.17-11.48-3.77-13.56s-2.34-10.55-3.09-13.61c-1.45 1.45-2.61 11.05-2.82 18-.21 6.67-.84 25.51-3.22 27.62-5.11 4.56-25.38 2.2-34.8.79-16.16-2.47-28.51-3.39-40.21-15.13C244.57 24.71 242 0 242 0H0s69.52 22.74 97.52 68.59c16.56 27.11 14.14 58.49 9.92 74.73C170 140 221.46 140 273 158.57c69.23 24.93 83.2 76.19 90 93.6 6.77-17.41 20.75-68.67 90-93.6 51.54-18.56 103-18.59 165.56-15.25-4.21-16.24-6.63-47.62 9.93-74.73C656.43 22.74 726 0 726 0z'/%3E%3C/svg%3E") no-repeat 50% 50%;
-            -webkit-mask-size: 100%;
-            cursor: pointer;
-            background-color: transparent;
-            transform: translateY(8px)
-        }
-
-        .logoButton:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            box-shadow: 0px 0 0 0 white;
-            transition: all 2s ease;
-        }
-
-        .logoButton:hover:after {
-            box-shadow: 0px -13px 56px 12px #ffffffa6;
-        }
-
-        .logoButton span {
-            position: absolute;
-            width: 100%;
-            font-size: 15px;
-            font-weight: 100;
-            left: 50%;
-            top: 39%;
-            letter-spacing: 3px;
-            text-align: center;
-            transform: translate(-50%, -50%);
-            color: black;
-            transition: all 2s ease;
-        }
-
-        .logoButton:hover span {
-            color: white;
-        }
-
-        .logoButton:before {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 100%;
-            background-color: black;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 1s ease;
-        }
-
-        .logoButton:hover:before {
-            width: 100%;
-        }
+        /* Your existing CSS styles */
     </style>
 </head>
 
 <body>
-    <div class="logoButton">
-        <span>PLAY NOW</span>
-    </div>
+    <!-- navbar -->
+    <header class="text-gray-600 body-font bg-blue-100 rounded-b-full">
+        <div class="container mx-auto flex flex-wrap justify-around items-center px-5 py-2">
+
+            <div class="logoButton">
+                <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 ">
+                    <img src="https://cdn.pixabay.com/photo/2017/06/08/17/43/blue-2384333_1280.png" alt=""
+                        class="w-[123px] h-[94px]">
+                    <span class="ml-3 text-2xl font-medium ">Portfolio </span>
+
+                </a>
+            </div>
+
+            <nav id="desktopNav"
+                class="md:ml-auto hidden md:flex flex-wrap  md:mr-auto cursor-pointer items-center text-base justify-center gap-8  menu menu-1">
+                <a class=" hover:text-indigo-500 text-lg font-medium">Home</a>
+                <a class=" hover:text-indigo-500 text-lg font-medium">About</a>
+                <a class=" hover:text-indigo-500 text-lg font-medium">Contact</a>
+                <a class=" hover:text-indigo-500 text-lg font-medium">Projects</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center justify-center">
+                <button class="botao">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="mysvg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0">
+                        </g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g id="Interface / Download">
+                                <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#f1f1f1"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="texto">Download</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Icon -->
+            <div class="md:hidden text-2xl mt-[-15px] hover:text-indigo-500">
+                <i id="mobileMenuIcon" class="fa-solid fa-bars openMenu"></i>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <nav id="mobileNav" class="hidden  w-full flex flex-col items-center text-base gap-4 menu menu-1 mt-4">
+                <a class="hover:text-indigo-500 text-lg font-medium">Home</a>
+                <a class="hover:text-indigo-500 text-lg font-medium">About</a>
+                <a class="hover:text-indigo-500 text-lg font-medium">Contact</a>
+                <a class="hover:text-indigo-500 text-lg font-medium">Projects</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- JavaScript -->
+    <script>
+        // Get references to the mobile menu icon and the mobile navigation menu
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+        const mobileNav = document.getElementById('mobileNav');
+
+        // Add a click event listener to the mobile menu icon
+        mobileMenuIcon.addEventListener('click', () => {
+            // Toggle the visibility of the mobile navigation menu
+            mobileNav.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
